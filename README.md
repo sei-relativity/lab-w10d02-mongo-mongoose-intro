@@ -1,6 +1,6 @@
 
 Title: Mongoose Vampires<br>
-Type: ~~Homework~~ Lab<br>
+Type: Lab + Homework<br>
 Duration: 1 + hours <br>
 Creator: WDI-Meeseeks <br>
 Adapted by: Kristyn Bryan, Karolin Rafalski<br>
@@ -44,7 +44,7 @@ var vampire = {
   loves: ['cereal','marshmallows'],
   location: 'Minneapolis, Minnesota, US',
   gender: 'm',
-  victims: 2,
+  victims: 2
 }
 ```
 
@@ -60,7 +60,7 @@ var vampire = {
 
 
 
-## Inserting Seed Data Using Mongoose
+## Insert Seed Data Using Mongoose
 
 Insert into the database using **create** method:
 
@@ -70,14 +70,15 @@ Insert into the database using **create** method:
 
 1. Write this command and run it **ONCE** in `app.js` - once you are done, comment it out or else every time you run it it will make duplicates of your data.
 
-```javascript
-Vampire.insertMany(seedData,(err, vampires) => {
-  if (err){ console.log(err)}
-    console.log("added provided vampire data", vampires)
-    mongoose.connection.close();
-  });
-```
-1. remember run  your file with `node app.js`
+    ```javascript
+    Vampire.insertMany(seedData, (err, vampires) => {
+      if (err){ console.log(err)}
+        console.log("added provided vampire data", vampires)
+        mongoose.connection.close();
+      });
+    ```
+
+1. Remember run  your file with `node app.js`
 
 ### Add some new vampire data
 
@@ -160,17 +161,17 @@ Select all vampires that:
 
 1. Check out Mongoose's Query Builder!
 
-```js
-Person.
-  find({ occupation: /host/ }).
-  where('name.last').equals('Ghost').
-  where('age').gt(17).lt(66).
-  where('likes').in(['vaporizing', 'talking']).
-  limit(10).
-  sort('-occupation').
-  select('name occupation').
-  exec(callback);
-```
+    ```js
+    Person.
+      find({ occupation: /host/ }).
+      where('name.last').equals('Ghost').
+      where('age').gt(17).lt(66).
+      where('likes').in(['vaporizing', 'talking']).
+      limit(10).
+      sort('-occupation').
+      select('name occupation').
+      exec(callback);
+    ```
 
 1. Write what that does in English: `Find a person whose occupation is ...`
 
