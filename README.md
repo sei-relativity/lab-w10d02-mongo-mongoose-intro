@@ -7,6 +7,7 @@ Adapted by: Kristyn Bryan, Karolin Rafalski<br>
 
 
 ---
+
 # Mongoose Vampires
 
 For this lab, you will be using some of the mongoose commands that you learned today and you will be **reading the documents** to find **new** queries to complete the following activities. Researching queries and implementing them is a big part of this lab!
