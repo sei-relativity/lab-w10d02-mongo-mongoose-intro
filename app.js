@@ -165,8 +165,34 @@ const vampFive = {
 
 
 // have greater than 150 AND fewer than 500 victims
-Vampire.find({$and: [ { victims: { $gt: 150, $lt: 500 } }  ]}, (err, vampire) => {
-    console.log(vampire);
-    db.close() 
-})
+// Vampire.find({$and: [ { victims: { $gt: 150, $lt: 500 } }  ]}, (err, vampire) => {
+//     console.log(vampire);
+//     db.close() 
+// })
 
+// ************ select by exists or does not exist ******
+// have a key of 'title'
+// Vampire.find({title: {$exists: true}}, (err, vampire) => {
+//       console.log(vampire);
+//       db.close() 
+//   })
+
+
+// do not have a key of 'victims'
+// Vampire.find({victims: {$exists: false}}, (err, vampire) => {
+//       console.log(vampire);
+//       db.close() 
+//   })
+
+
+// have a title AND no victims
+// Vampire.find({ $and: [ { victims: { $exists: false } }, { title: { $exists: false } } ] } , (err, vampire) => {
+//       console.log(vampire);
+//       db.close() 
+//   })
+
+// have victims AND the victims they have are greater than 1000
+Vampire.find({ $and: [ { victims: { $exists: true } }, { victims: { $gte: 1000 } } ] } , (err, vampire) => {
+      console.log(vampire);
+      db.close() 
+  })
