@@ -217,3 +217,30 @@ const vampFive = {
 //     console.log(vampire);
 //     db.close() 
 // })
+
+
+// Select objects that match one of several values
+// love either frilly shirtsleeves or frilly collars
+// Vampire.find({loves: {$in: ['frilly shirtsleeves', 'frilly collars']} } , (err, vampire) => {
+//     console.log(vampire);
+//     db.close() 
+// })
+
+
+// love brooding
+// Vampire.find({loves: {$in: ['brooding']} } , (err, vampire) => {
+//     console.log(vampire);
+//     db.close() 
+// })
+
+// love at least one of the following: appearing innocent, trickery, lurking in rotting mansions, R&B music
+// Vampire.find({loves: {$in: ['appearing innocent', 'trickery', 'lurking in rotting mansions', 'R&B music']} } , (err, vampire) => {
+//     console.log(vampire);
+//     db.close() 
+// })
+
+// love fancy cloaks but not if they also love either top hats or virgin blood * Hint-You will also have to use $nin *
+// Vampire.find ( {loves: {$in: ['fancy cloaks'], $nin: ['top hat','virgin blood']} } , (err, vampire) => {
+//     console.log(vampire);
+//     db.close() 
+// })
