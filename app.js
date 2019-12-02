@@ -75,40 +75,98 @@ const vampFour = {
   victims: 500
 }
 
+const vampFive = {
+  name: 'Taric',
+  hair_color: 'grey',
+  eye_color:'blue',
+  dob: new Date(1650, 2, 13, 7, 47),
+  loves: ['Relic stacks', 'kill steals'],
+  location: 'Mount Targon, Runeterra',
+  gender: 'm',
+  victims: 9999
+}
+
+// Vampire.create(vampOne, (error, vampire) => {
+//     if(error){
+//         console.log(error);
+//     } else {
+//         console.log(vampire);
+//     }
+//     db.close()
+// })
+
+// Vampire.create(vampTwo, (error, vampire) => {
+//   if(error){
+//       console.log(error);
+//   } else {
+//       console.log(vampire);
+//   }
+//   db.close()
+// })
+
+// Vampire.create(vampThree, (error, vampire) => {
+//   if(error){
+//       console.log(error);
+//   } else {
+//       console.log(vampire);
+//   }
+//   db.close()
+// })
+
+// Vampire.create(vampFour, (error, vampire) => {
+//   if(error){
+//       console.log(error);
+//   } else {
+//       console.log(vampire);
+//   }
+//   db.close()
+// })
 
 
-Vampire.create(vampOne, (error, vampire) => {
-    if(error){
-        console.log(error);
-    } else {
-        console.log(vampire);
-    }
-    db.close()
+// Vampire.create(vampFive, (error, vampire) => {
+//   if(error){
+//       console.log(error);
+//   } else {
+//       console.log(vampire);
+//   }
+//   db.close()
+// })
+
+// Find all the vampires that that are females
+// Vampire.find({gender: 'f'}, (err, vampire) => {
+//     console.log(vampire);
+//     db.close() 
+// })
+
+
+// have greater than 500 victims
+// Vampire.find({victims: {$gte: 500}}, (err, vampire) => {
+//     console.log(vampire);
+//     db.close() 
+// })
+
+// have fewer than or equal to 150 victims
+// Vampire.find({victims: {$lte: 150}}, (err, vampire) => {
+//     console.log(vampire);
+//     db.close() 
+// })
+
+// have a victim count is not equal to 210234
+// Vampire.find({victims: {$ne: 210234}}, (err, vampire) => {
+//     console.log(vampire);
+//     db.close() 
+// })
+
+// have greater than 150 AND fewer than 500 victims
+// Vampire.find({victims: {$ne: 210234}}, (err, vampire) => {
+//     console.log(vampire);
+//     db.close() 
+// })
+
+
+// have greater than 150 AND fewer than 500 victims
+Vampire.find({$and: [ { victims: { $gt: 150, $lt: 500 } }  ]}, (err, vampire) => {
+    console.log(vampire);
+    db.close() 
 })
 
-Vampire.create(vampTwo, (error, vampire) => {
-  if(error){
-      console.log(error);
-  } else {
-      console.log(vampire);
-  }
-  db.close()
-})
-
-Vampire.create(vampThree, (error, vampire) => {
-  if(error){
-      console.log(error);
-  } else {
-      console.log(vampire);
-  }
-  db.close()
-})
-
-Vampire.create(vampFour, (error, vampire) => {
-  if(error){
-      console.log(error);
-  } else {
-      console.log(vampire);
-  }
-  db.close()
-})
