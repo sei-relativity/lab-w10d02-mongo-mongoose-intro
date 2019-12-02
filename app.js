@@ -192,7 +192,28 @@ const vampFive = {
 //   })
 
 // have victims AND the victims they have are greater than 1000
-Vampire.find({ $and: [ { victims: { $exists: true } }, { victims: { $gte: 1000 } } ] } , (err, vampire) => {
-      console.log(vampire);
-      db.close() 
-  })
+// Vampire.find({ $and: [ { victims: { $exists: true } }, { victims: { $gte: 1000 } } ] } , (err, vampire) => {
+//       console.log(vampire);
+//       db.close() 
+//   })
+
+
+// ******* Select with OR ******
+// are from New York, New York, US or New Orleans, Louisiana, US
+// Vampire.find({$or: [{location: 'New York, New York, US'}, {location: 'New Orleans, Louisiana, US'} ] } , (err, vampire) => {
+//       console.log(vampire);
+//       db.close() 
+//   })
+
+// love brooding or being tragic
+// Vampire.find({$or: [{loves: 'brooding'}, {loves: 'being tragic'} ] } , (err, vampire) => {
+//         console.log(vampire);
+//         db.close() 
+// })
+
+
+// have red hair or green eyes
+// Vampire.find({$or: [{eye_color: 'green'}, {hair_color: 'red'} ] } , (err, vampire) => {
+//     console.log(vampire);
+//     db.close() 
+// })
