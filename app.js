@@ -244,3 +244,11 @@ const vampFive = {
 //     console.log(vampire);
 //     db.close() 
 // })
+
+// **** negative selection ****
+// love ribbons but do not have brown eyes
+Vampire.find({$nor:[{likes:'ribbons'}, {eye_color:{$not: 'brown eyes'}}]}, (err, vampire) => {
+    console.log(vampire);
+    db.close() 
+})
+
