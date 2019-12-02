@@ -25,3 +25,10 @@ db.on("open", () => {
 /**********************************************************************
 Write Your Code Below
 **********************************************************************/
+Vampire.insertMany(seedData, (err, vampires) => {
+  if (err) {
+    console.log(err);
+  }
+  console.log("added provided vampire data", vampires);
+  mongoose.connection.close();
+});
