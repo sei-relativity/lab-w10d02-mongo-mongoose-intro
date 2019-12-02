@@ -1,18 +1,20 @@
-Title: Mongoose Vampires<br>
-Type: Lab + Homework<br>
-Duration: 1 + hours <br>
-Creator: WDI-Meeseeks <br>
-Adapted by: Kristyn Bryan, Karolin Rafalski<br>
+# Lab & Homework
+
+Title: Mongoose Vampires
+Type: Lab + Homework
+Duration: 1 + hours
+Creator: WDI-Meeseeks
+Adapted by: Kristyn Bryan, Karolin Rafalski
 
 ---
 
-# Mongoose Vampires
+## Mongoose Vampires
 
 For this lab, you will be using some of the mongoose commands that you learned today and you will be **reading the documents** to find **new** queries to complete the following activities. Researching queries and implementing them is a big part of this lab!
 
 ![mongoose](https://s-media-cache-ak0.pinimg.com/564x/ee/b7/a9/eeb7a99383582d53e65ffcc0e4a225bd.jpg)
 
-# Resources
+## Resources
 
 Utilize the following resources to research the commands you will need:
 
@@ -20,13 +22,13 @@ Utilize the following resources to research the commands you will need:
 - Mongoose Documentation
 - Google to find Stack Overflow articles and more
 
-# Setup
+## Setup
 
 1. Start your mongo server with `brew services start mongodb` in terminal
 1. Navigate to this directory in terminal and `npm i` to install `mongoose`
 1. Open the project in code, you'll be working with some starter code in the `models` folder and the `app.js` file
 
-# The Exercise
+## The Exercise
 
 ## Building a Schema
 
@@ -50,7 +52,7 @@ var vampire = {
 
 1. Build a vampire **schema** and **model** that matches the object above inside the `models/vampires.js` file
 
-1. Go to the Mongoose documentation to learn more about validations and defaults: http://mongoosejs.com/docs/api.html
+1. Go to the Mongoose documentation to learn more about validations and defaults: <http://mongoosejs.com/docs/api.html>
 
 1. The **name field is required**, so make sure that the schema accommodates for that.
 
@@ -58,11 +60,11 @@ var vampire = {
 
 1. Lastly, set the **default value of the hair color to blonde**.
 
-## Insert Seed Data Using Mongoose
+### Insert Seed Data Using Mongoose
 
 Insert into the database using **create** method:
 
-### Add the vampire data that we gave you
+#### Add the vampire data that we gave you
 
 1. We have required `seed_vampires.js` for you in the `app.js` file. This is an array of Vampires for you to insert into your database.
 
@@ -80,13 +82,13 @@ Insert into the database using **create** method:
 
 1. Remember run your file with `node app.js`
 
-### Add some new vampire data
+#### Add some new vampire data
 
 1. Using the create method, create 4 new vampires with any qualities that you like two should be male and two should be female.
 
-## Querying
+### Querying
 
-### Select by comparison
+#### Select by comparison
 
 Write a different query for each of the following:
 
@@ -96,7 +98,7 @@ Write a different query for each of the following:
 4. have a victim count is not equal to 210234
 5. have greater than 150 AND fewer than 500 victims
 
-### Select by exists or does not exist
+#### Select by exists or does not exist
 
 Select all the vampires that:
 
@@ -105,7 +107,7 @@ Select all the vampires that:
 3. have a title AND no victims
 4. have victims AND the victims they have are greater than 1000
 
-### Select with OR
+#### Select with OR
 
 Select all the vampires that:
 
@@ -114,7 +116,7 @@ Select all the vampires that:
 3. have more than 1000 victims or love marshmallows
 4. have red hair or green eyes
 
-### Select objects that match one of several values
+#### Select objects that match one of several values
 
 Select all the vampires that:
 
@@ -123,7 +125,7 @@ Select all the vampires that:
 3. love at least one of the following: appearing innocent, trickery, lurking in rotting mansions, R&B music
 4. love fancy cloaks but not if they also love either top hats or virgin blood _ Hint-You will also have to use \$nin _
 
-### Negative Selection
+#### Negative Selection
 
 Select all vampires that:
 
@@ -132,12 +134,12 @@ Select all vampires that:
 3. do not love any of the following: [fancy cloaks, frilly shirtsleeves, appearing innocent, being tragic, brooding]
 4. have not killed more than 200 people
 
-## Replace
+### Replace
 
 1. replace the vampire called 'Claudia' with a vampire called 'Eve'. 'Eve' will have a key called 'portrayed_by' with the value 'Tilda Swinton'
 2. replace the first male vampire with another whose name is 'Guy Man', and who has a key 'is_actually' with the value 'were-lizard'
 
-## Update
+### Update
 
 1. Update 'Guy Man' to have a gender of 'f'
 2. Update 'Eve' to have a gender of 'm'
@@ -146,13 +148,14 @@ Select all vampires that:
 5. Rename 'Eve's' name field to 'moniker'
 6. We now no longer want to categorize female gender as "f", but rather as **fems**. Update all females so that the they are of gender "fems".
 
-## Remove
+### Remove
 
 1. Remove a single document wherein the hair_color is 'brown'
 2. We found out that the vampires with the blue eyes were just fakes! Let's remove all the vampires who have blue eyes from our database.
-   <hr>
 
-## Hungry for more
+---
+
+### Hungry for more
 
 1. Check out Mongoose's Query Builder!
 
