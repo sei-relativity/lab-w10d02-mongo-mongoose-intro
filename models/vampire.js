@@ -11,7 +11,7 @@ const vampireSchema = new Schema({
   loves     : [String],
   location  : String,
   gender    : { type: String, enum: ["m", "f"] },
-  victims   : { type: Number, default: 0, min: 0 }
+  victims   : { type: Number, min: 0 }
 });
 
 const Vampire = mongoose.model("Vampire", vampireSchema);
